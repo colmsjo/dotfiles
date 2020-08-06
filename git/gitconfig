@@ -1,0 +1,14 @@
+[user]
+	email = jonas.colmsjo@gizur.com
+	name = Jonas Colmsjö
+[push]
+	default = matching
+
+[color]
+	ui = auto
+[alias]
+  gr = log --graph --full-history --all --color --pretty=tformat:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m(%ai-%ar)"
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
