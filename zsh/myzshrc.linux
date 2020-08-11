@@ -1,0 +1,19 @@
+#
+# zshrc (source ~/.dotfiles/zsh/myzshrc.linux from ~/.zshrc)
+# ==========================================================
+#
+
+
+# Tilix
+# ======
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
+
+# Stata
+# ======
+
+export PATH="$PATH:/usr/local/stat16/"
+export STATA_PROJECT_DIR="~/git/"
