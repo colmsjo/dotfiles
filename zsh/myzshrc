@@ -134,3 +134,22 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
+
+# For Tex on Linux
+# =================
+
+
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+  ;;
+  Linux)
+    # commands for Linux go here
+    # still dont work - export PATH="$PATH:/usr/share/texlive/"
+    export PATH="$PATH:/usr/local/stat16/"
+
+  ;;
+  FreeBSD)
+    # commands for FreeBSD go here
+  ;;
+esac
