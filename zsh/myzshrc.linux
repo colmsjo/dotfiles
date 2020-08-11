@@ -16,4 +16,4 @@ fi
 # ======
 
 export PATH="$PATH:/usr/local/stat16/"
-export STATA_PROJECT_DIR="~/git/"
+export STATA_PROJECT_DIR="~/git"
