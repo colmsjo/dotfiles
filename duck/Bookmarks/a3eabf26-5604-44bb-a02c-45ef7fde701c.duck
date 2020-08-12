@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Protocol</key>
+	<string>googledrive</string>
+	<key>Provider</key>
+	<string>iterate GmbH</string>
+	<key>Nickname</key>
+	<string>Google Drive - jonas.colmsjo@gizur.com</string>
+	<key>UUID</key>
+	<string>a3eabf26-5604-44bb-a02c-45ef7fde701c</string>
+	<key>Hostname</key>
+	<string>www.googleapis.com</string>
+	<key>Port</key>
+	<string>443</string>
+	<key>Username</key>
+	<string>jonas.colmsjo@gizur.com</string>
+	<key>Path</key>
+	<string>/</string>
+	<key>Access Timestamp</key>
+	<string>1597132420216</string>
+</dict>
+</plist>
