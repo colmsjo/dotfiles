@@ -1,136 +1,17 @@
 #
 # zshrc (source ~/.dotfiles/zsh/myzshrc from ~/.zshrc)
-# --------------------------------------
+# ===================================================
 #
 
 
-#
-# Generic
-# =======
+# Setup that differs per platform
+# ===============================
 
-# /usr/local/bin and sbin should always be first
-export PATH=/usr/local/sbin:/usr/local/bin:$HOME/local/bin:$HOME/Dropbox/scripts:$PATH
-
-# git prompt
-#source ~/Dropbox/scripts/git-prompt.sh
-#PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
-
-# colorize ls
-alias ls='ls -G'
-
-# disk usage summary
-alias du-summary='ls -d $1* | xargs du -h -s; du -s -h $1'
-
-#
-# OSX related
-# ===========
-
-# show/hide hidden files
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
-
-# rebuild launch services (to get rid of several atom versions when right clicking)
-alias rebuildLaunchServices='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Dock;killall Finder;echo "Rebuilt Open With, relaunching Finder"'
-ARTOOLKIT5_ROOT=/Users/jonas/local/ARToolKit5-bin-5.3.2r1-OSX; export ARTOOLKIT5_ROOT
-
-
-#
-# Misc development tools
-# =====================
-
-# Node - path &  nvm
-export NODE_PATH=/usr/local/lib/node_modules:~/node_modules:.
-alias useNvm="[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh; [ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\""
-
-# Ruby version manager,  # Load RVM into a shell session *as a function*
-alias useRvm="[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\"; export PATH=$PATH:$HOME/.rvm/bin; rvm use ruby-2.4.0"
-
-# Turn on/off adb
-alias useAdb='export PATH="$HOME/local/platform-tools:$PATH"'
-alias dontUseAdb='export PATH=${PATH//\/Users\/jonas\/local\/platform-tools:}'
-
-# Turn on lua version manager
-alias useLuaver='. `which luaver`'
-
-# torch
-alias useTorch='. /Users/jonas/torch/install/bin/torch-activate'
-
-# Wasmer
-export WASMER_DIR="/Users/jonas/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
-
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Chrome
-alias chrome_dev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security'
-
-# git log
-alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
-
-#
-# Misc
-# ====
-
-alias showpass_old='gpg2 -d < ~/Dropbox/keys/Loesen.txt | more'
-alias showpass_long='gpg2 -d < ~/Dropbox/keys/Loesen_long.txt | more'
-
-#
-# Pandoc
-# ======
-
-export CABALDIR=/Users/jonas/.cabal
-alias usePandoc='export PATH="$CABALDIR/bin:$PATH"'
-alias dontUsePandoc='export PATH=${PATH//$CABALDIR\/bin:}'
-
-
-#
-# Python related
-# ==============
-
-
-# Make it possible to use the Python Framework build in virtualenv
-function frameworkpython {
-    if [[ ! -z "$VIRTUAL_ENV" ]]; then
-        PYTHONHOME=$VIRTUAL_ENV /usr/local/bin/python3 "$@"
-    else
-        /usr/local/bin/python3 "$@"
-    fi
-}
-
-# This screws up my use/dontUse aliases, put in function that is called from useConda
-function useCondaFunc {
-  # >>> conda initialize >>>
-  # !! Contents within this block are managed by 'conda init' !!
-
-  __conda_setup="$('/Users/jonas/local/conda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-  if [ $? -eq 0 ]; then
-      eval "$__conda_setup"
-  else
-      if [ -f "/Users/jonas/local/conda3/etc/profile.d/conda.sh" ]; then
-          . "/Users/jonas/local/conda3/etc/profile.d/conda.sh"
-      else
-          export PATH="/Users/jonas/local/conda3/bin:$PATH"
-      fi
-  fi
-  unset __conda_setup
-  # <<< conda initialize <<<
-}
-
-# Turn on/off conda
-alias useConda='export PATH="/Users/jonas/local/conda3/bin:$PATH"; useCondaFunc'
-alias dontUseConda='export PATH=${PATH//\/Users\/jonas\/local\/conda3\/bin:}'
-
-# Turn on/off brew python3
-alias usePythonBrew='export PATH="/usr/local/opt/python/libexec/bin:$PATH"'
-alias dontUsePythonBrew='export PATH=${PATH//\/usr\/local\/opt\/python\/libexec\/bin:}'
-
-# Force pipenv to create it's own virtual env also when (it thinks) it is within a virtual env
-export PIPENV_IGNORE_VIRTUALENVS=1
-
-# Tilix
-# ======
-
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
+case `uname` in
+  Darwin)
+    . ~/.dotfiles/zsh/myzshrc.darwin
+  ;;
+  Linux)
+    . ~/.dotfiles/zsh/myzshrc.linux
+  ;;
+esac
