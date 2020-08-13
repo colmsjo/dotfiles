@@ -127,3 +127,10 @@ alias dontUsePythonBrew='export PATH=${PATH//\/usr\/local\/opt\/python\/libexec\
 
 # Force pipenv to create it's own virtual env also when (it thinks) it is within a virtual env
 export PIPENV_IGNORE_VIRTUALENVS=1
+
+# Stata
+# =======
+
+# Move to /etc/launchd.conf
+# export STATA_PROJECT_DIR="~/git/myrepos"
+# launchctl setenv STATA_PROJECT_DIR "~/git/myrepos"
