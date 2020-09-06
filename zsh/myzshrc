@@ -17,7 +17,3 @@ case `uname` in
 esac
 
 
-# OTP cli
-# ==============
-
-export PATH=$PATH:~/local/otp-cli
