@@ -1,3 +1,9 @@
+#
+# getmail --rcfile getmailrc-PROVIDER
+#
+# use notmuch to index and search the mail	
+#
+
 # Create folders for the mail
 # 
 # mkdir -p ~/mail/inbox/{cur,new,tmp}

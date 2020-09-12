@@ -74,6 +74,7 @@ alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b
 
 alias showpass_old='gpg2 -d < ~/Dropbox/keys/Loesen.txt | more'
 alias showpass_long='gpg2 -d < ~/Dropbox/keys/Loesen_long.txt | more'
+alias mutts='mutt -F ~/.muttrc.standalone'
 
 #
 # Pandoc
