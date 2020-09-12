@@ -1,0 +1,27 @@
+[options]
+# print out some information
+verbose = 1
+# just read new mails
+read_all = false
+# don't delete the mails on the server
+delete = false
+message_log = ~/.getmail/log
+
+[retriever]
+type = SimpleIMAPSSLRetriever
+server = imap.gmail.com
+# get inbox - mailboxes = ("All e-post",)
+username = <user>
+password = <pwd>
+
+[destination]
+type = Maildir
+path = ~/mail/
+
+# [destination]
+# type = MDA_external
+# path = /usr/local/bin/procmail
+# procmail requires either that the message starts with an mboxrd-style
+# "From " line (which getmail can generate by setting "unixfrom" to True), or
+# that the -f option is provided as below.
+# arguments = ("-f", "%(sender)", "-m", "/home/username/.procmailrc")
