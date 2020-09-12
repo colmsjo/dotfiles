@@ -1,3 +1,10 @@
+# Create folders for the mail
+# 
+# mkdir -p ~/mail/inbox/{cur,new,tmp}
+# mkdir -p ~/mail/sent/{cur,new,tmp}
+# ... additional acconts
+#
+
 [options]
 # print out some information
 verbose = 1
