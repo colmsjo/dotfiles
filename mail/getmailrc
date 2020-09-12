@@ -23,7 +23,7 @@ password = <pwd>
 
 [destination]
 type = Maildir
-path = ~/mail/
+path = ~/mail/inbox/
 
 # [destination]
 # type = MDA_external
