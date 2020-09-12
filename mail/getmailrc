@@ -9,7 +9,7 @@
 # print out some information
 verbose = 1
 # just read new mails
-read_all = false
+read_all = true
 # don't delete the mails on the server
 delete = false
 message_log = ~/.getmail/log
@@ -17,7 +17,7 @@ message_log = ~/.getmail/log
 [retriever]
 type = SimpleIMAPSSLRetriever
 server = imap.gmail.com
-# get inbox - mailboxes = ("All e-post",)
+mailboxes = ALL # ("inbox",)
 username = <user>
 password = <pwd>
 
