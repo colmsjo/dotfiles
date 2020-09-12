@@ -4,6 +4,8 @@
 # mkdir -p ~/mail/sent/{cur,new,tmp}
 # ... additional acconts
 #
+# getmail --rcfile mailprovider1 --rcfile mailprovider2
+#
 
 [options]
 # print out some information
@@ -15,6 +17,7 @@ delete = false
 message_log = ~/.getmail/log
 
 [retriever]
+# type = SimpleIMAPRetriever
 type = SimpleIMAPSSLRetriever
 server = imap.gmail.com
 mailboxes = ALL # ("inbox",)
