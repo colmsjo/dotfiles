@@ -1,0 +1,17 @@
+set mbox_type=maildir
+set mbox="~/mail/inbox/"
+set spoolfile="~/mail/inbox/"
+set folder="~/mail/"
+set record="~/mail/sent/"
+
+mailboxes ~/mail/inbox # ~/mail/debian-user
+set sort=threads
+set include=yes
+set indent_str="> "
+
+# subscribe debian-user
+
+# Now you can (hopefully) read your mails and enjoy.
+# mutt                         # opens standard mailbox ~/mail/inbox
+# mutt -f ~/mail/custommailbox # opens custommailbox
+

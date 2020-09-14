@@ -16,4 +16,6 @@ fi
 # ======
 
 export PATH="$PATH:/usr/local/stat16/"
-export STATA_PROJECT_DIR="~/git"
+
+# Moved this to a ADO-file, see ../stata
+# export STATA_PROJECT_DIR="~/git"

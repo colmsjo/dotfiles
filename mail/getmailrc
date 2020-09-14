@@ -1,0 +1,43 @@
+#
+# getmail --rcfile getmailrc-PROVIDER
+#
+# use notmuch to index and search the mail	
+#
+
+# Create folders for the mail
+# 
+# mkdir -p ~/mail/inbox/{cur,new,tmp}
+# mkdir -p ~/mail/sent/{cur,new,tmp}
+# ... additional acconts
+#
+# getmail --rcfile mailprovider1 --rcfile mailprovider2
+#
+
+[options]
+# print out some information
+verbose = 1
+# just read new mails
+read_all = true
+# don't delete the mails on the server
+delete = false
+message_log = ~/.getmail/log
+
+[retriever]
+# type = SimpleIMAPRetriever
+type = SimpleIMAPSSLRetriever
+server = imap.gmail.com
+mailboxes = ALL # ("inbox",)
+username = <user>
+password = <pwd>
+
+[destination]
+type = Maildir
+path = ~/mail/inbox/
+
+# [destination]
+# type = MDA_external
+# path = /usr/local/bin/procmail
+# procmail requires either that the message starts with an mboxrd-style
+# "From " line (which getmail can generate by setting "unixfrom" to True), or
+# that the -f option is provided as below.
+# arguments = ("-f", "%(sender)", "-m", "/home/username/.procmailrc")
