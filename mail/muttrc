@@ -1,10 +1,10 @@
 set mbox_type=maildir
-set mbox="~/mail/inbox/"
-set spoolfile="~/mail/inbox/"
-set folder="~/mail/"
-set record="~/mail/sent/"
+set mbox="~/storage/email/gizur-emailfy21/gmail/"
+set spoolfile="~/storage/email/gizur-emailfy21/gmail/"
+set folder="~/storage/email/gizur-emailfy21/"
+set record="~/storage/mail/gizur-emailfy21/gmail/"
 
-mailboxes ~/mail/inbox # ~/mail/debian-user
+mailboxes ~/storage/email/gizur-emailfy21/gmail ~/storage/email/gizur-emailfy21/protonmail
 set sort=threads
 set include=yes
 set indent_str="> "
@@ -14,4 +14,3 @@ set indent_str="> "
 # Now you can (hopefully) read your mails and enjoy.
 # mutt                         # opens standard mailbox ~/mail/inbox
 # mutt -f ~/mail/custommailbox # opens custommailbox
-
