@@ -5,7 +5,7 @@ editor_cmd=nano
 [accounts]
     [[protonmaiil]]
         realname = Jonas
-        address = mail
+        address = mal
         alias_regexp = i\+.+@gizur.com
         # gpg_key = D7D6C5AA
         sendmail_command = msmtp --account=protonmail -t
@@ -13,3 +13,9 @@ editor_cmd=nano
         # ~ expansion also works
         draft_box = maildir://~/storage/email/gizur-emailfy21/alot-draft
 
+
+      [[[abook]]]
+          type = shellcommand
+          command = abook --mutt-query
+          regexp = '^(?P<email>[^@]+@[^\t]+)\t+(?P<name>[^\t]+)'
+          ignorecase = True
