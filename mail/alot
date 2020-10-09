@@ -1,0 +1,15 @@
+# ~/.config/alot/config
+
+editor_cmd=nano
+
+[accounts]
+    [[protonmaiil]]
+        realname = Jonas
+        address = mail
+        alias_regexp = i\+.+@gizur.com
+        # gpg_key = D7D6C5AA
+        sendmail_command = msmtp --account=protonmail -t
+        sent_box = maildir://~/storage/email/gizur-emailfy21/alot-sent
+        # ~ expansion also works
+        draft_box = maildir://~/storage/email/gizur-emailfy21/alot-draft
+
