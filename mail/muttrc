@@ -1,3 +1,7 @@
+#
+# Readmail fetched with getmail (alot is nicer though)
+#
+
 set mbox_type=maildir
 set mbox="~/storage/email/gizur-emailfy21/gmail/"
 set spoolfile="~/storage/email/gizur-emailfy21/gmail/"
@@ -8,6 +12,26 @@ mailboxes ~/storage/email/gizur-emailfy21/gmail ~/storage/email/gizur-emailfy21/
 set sort=threads
 set include=yes
 set indent_str="> "
+
+
+#
+# Send mail thtough ProtonMail Bridge
+#
+
+set record = +Sent
+
+set my_pass='secret'
+set my_user=user
+
+set realname = 'Me'
+set from = mal
+set use_from = yes
+
+set smtp_pass = $my_pass
+set smtp_url=smtp://$my_user@127.0.0.1:1025
+set ssl_force_tls = yes
+set ssl_starttls = yes
+
 
 # subscribe debian-user
 
