@@ -15,12 +15,6 @@ export PATH=/usr/local/sbin:/usr/local/bin:$HOME/local/bin:$HOME/Dropbox/scripts
 #source ~/Dropbox/scripts/git-prompt.sh
 #PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
 
-# colorize ls
-alias ls='ls -G'
-
-# disk usage summary
-alias du-summary='ls -d $1* | xargs du -h -s; du -s -h $1'
-
 #
 # OSX related
 # ===========

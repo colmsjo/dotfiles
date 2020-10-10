@@ -5,7 +5,13 @@
 
 . ~/local/z/z.sh
 
+# colorize ls
+#alias ls='ls -G'
+
+alias du-summary='ls -d $1* | xargs du -h -s; du -s -h $1'
+
 alias cat="bat"
+alias ls="exa -lahF"
 
 # Setup that differs per platform
 # ===============================
