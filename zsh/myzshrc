@@ -5,6 +5,8 @@
 
 . ~/local/z/z.sh
 
+alias cat="bat"
+
 # Setup that differs per platform
 # ===============================
 
