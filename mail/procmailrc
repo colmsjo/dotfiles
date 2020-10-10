@@ -1,0 +1,14 @@
+MAILDIR=$HOME/storage/email/gizur-emailfy21/procmail
+LOGFILE=$HOME/.procmaillog
+VERBOSE=yes
+
+# example of filtering for mailing lists
+# all mails to debian-user will be send to
+# the debian-user directory.
+:0
+* ^TO_per@gizur.com
+per/
+
+# all other mails will be moved to the inbox
+:0
+inbox/

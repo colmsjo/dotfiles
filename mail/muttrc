@@ -8,7 +8,7 @@ set spoolfile="~/storage/email/gizur-emailfy21/gmail/"
 set folder="~/storage/email/gizur-emailfy21/"
 set record="~/storage/mail/gizur-emailfy21/gmail/"
 
-mailboxes ~/storage/email/gizur-emailfy21/gmail ~/storage/email/gizur-emailfy21/protonmail
+mailboxes ~/storage/email/gizur-emailfy21/gmail ~/storage/email/gizur-emailfy21/protonmail  ~/storage/email/gizur-emailfy21/procmail
 set sort=threads
 set include=yes
 set indent_str="> "
@@ -20,11 +20,11 @@ set indent_str="> "
 
 set record = +Sent
 
-set my_pass='secret'
+set my_pass='pwd'
 set my_user=user
 
-set realname = 'Me'
-set from = mal
+set realname = 'Jonas'
+set from = mail
 set use_from = yes
 
 set smtp_pass = $my_pass
