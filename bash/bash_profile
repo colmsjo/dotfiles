@@ -9,11 +9,11 @@
 # =======
 
 # /usr/local/bin and sbin should always be first
-export PATH=/usr/local/sbin:/usr/local/bin:$HOME/local/bin:$HOME/Dropbox/scripts:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:$HOME/local/bin:$PATH
 
 # git prompt
-source ~/Dropbox/scripts/git-prompt.sh
-PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
+#source ~/Dropbox/scripts/git-prompt.sh
+#PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
 
 # colorize ls
 alias ls='ls -G'
@@ -73,7 +73,6 @@ alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b
 # ====
 
 
-alias showpass='cd /tmp;gpg2 -d < ~/Dropbox/keys/Loesen.txt | more'
 alias mutts='mutt -F ~/.muttrc.standalone'
 
 #

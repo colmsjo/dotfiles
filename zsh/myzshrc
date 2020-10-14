@@ -12,6 +12,7 @@ alias du-summary='ls -d $1* | xargs du -h -s; du -s -h $1'
 
 alias cat="bat"
 alias ls="exa -lahF"
+alias find="fd"
 
 # Setup that differs per platform
 # ===============================
