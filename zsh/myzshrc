@@ -3,7 +3,7 @@
 # ===================================================
 #
 
-. ~/local/z/z.sh
+# . ~/local/z/z.sh
 
 # colorize ls
 #alias ls='ls -G'
