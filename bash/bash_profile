@@ -9,11 +9,11 @@
 # =======
 
 # /usr/local/bin and sbin should always be first
-export PATH=/usr/local/sbin:/usr/local/bin:$HOME/local/bin:$HOME/Dropbox/scripts:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:$HOME/local/bin:$PATH
 
 # git prompt
-source ~/Dropbox/scripts/git-prompt.sh
-PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
+#source ~/Dropbox/scripts/git-prompt.sh
+#PS1="\[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ "
 
 # colorize ls
 alias ls='ls -G'
@@ -68,12 +68,11 @@ alias chrome_dev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 # git log
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 
+
 #
 # Misc
 # ====
 
-
-alias showpass='cd /tmp;gpg2 -d < ~/Dropbox/keys/Loesen.txt | more'
 alias mutts='mutt -F ~/.muttrc.standalone'
 
 #
@@ -125,6 +124,8 @@ alias dontUseConda='export PATH=${PATH//\/Users\/jonas\/local\/conda3\/bin:}'
 # Turn on/off brew python3
 alias usePythonBrew='export PATH="/usr/local/opt/python/libexec/bin:$PATH"'
 alias dontUsePythonBrew='export PATH=${PATH//\/usr\/local\/opt\/python\/libexec\/bin:}'
+alias useReticulate='export PATH="/Users/jonas/Library/r-miniconda/envs/r-reticulate/bin:$PATH"';
+alias dontUseReticulate='export PATH=${PATH//\/Users\/jonas\/Library\/r-miniconda\/envs\/r-reticulate\/bin:}'
 
 # Force pipenv to create it's own virtual env also when (it thinks) it is within a virtual env
 export PIPENV_IGNORE_VIRTUALENVS=1

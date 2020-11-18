@@ -9,7 +9,7 @@
 # =======
 
 # /usr/local/bin and sbin should always be first
-export PATH=/usr/local/sbin:/usr/local/bin:$HOME/local/bin:$HOME/Dropbox/scripts:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:$HOME/local/bin:$PATH
 
 # git prompt
 #source ~/Dropbox/scripts/git-prompt.sh
