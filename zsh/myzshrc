@@ -8,12 +8,19 @@
 #alias ls='ls -G'
 alias du-summary='ls -d $1* | xargs du -h -s; du -s -h $1'
 alias cat="bat"
-#alias ls="exa -lahF"
 alias ls="exa -lahF"
 alias find="fd"
 
+
+# My shell scripts
+# ================
+
+export PATH=$PATH:/Volumes/data/local/bin
+
+
 # TinyTeX
 # =======
+
 export TEXPATH=/Users/jonas/Library/TinyTeX
 export PATH=$PATH:$TEXPATH/bin/x86_64-darwin
 
