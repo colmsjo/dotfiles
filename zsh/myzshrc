@@ -7,9 +7,15 @@
 # colorize ls
 #alias ls='ls -G'
 alias du-summary='ls -d $1* | xargs du -h -s; du -s -h $1'
-alias cat="bat"#alias ls="exa -lahF"
+alias cat="bat"
+#alias ls="exa -lahF"
 alias ls="exa -lahF"
 alias find="fd"
+
+# TinyTeX
+# =======
+export TEXPATH=/Users/jonas/Library/TinyTeX
+export PATH=$PATH:$TEXPATH/bin/x86_64-darwin
 
 
 # Setup that differs per platform
