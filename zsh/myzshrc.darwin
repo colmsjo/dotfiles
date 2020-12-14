@@ -34,8 +34,14 @@ ARTOOLKIT5_ROOT=/Users/jonas/local/ARToolKit5-bin-5.3.2r1-OSX; export ARTOOLKIT5
 # =====================
 
 # Node - path &  nvm
-export NODE_PATH=/usr/local/lib/node_modules:~/node_modules:.
-alias useNvm="[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh; [ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\""
+#export NODE_PATH=/usr/local/lib/node_modules:~/node_modules:.
+#alias useNvm="[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh; [ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\""
+
+# install with: brew instal nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 
 # Ruby version manager,  # Load RVM into a shell session *as a function*
 alias useRvm="[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\"; export PATH=$PATH:$HOME/.rvm/bin; rvm use ruby-2.4.0"
@@ -61,6 +67,7 @@ alias chrome_dev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 # git log
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+
 
 #
 # Misc
