@@ -127,5 +127,8 @@ alias dontUsePythonBrew='export PATH=${PATH//\/usr\/local\/opt\/python\/libexec\
 alias useReticulate='export PATH="/Users/jonas/Library/r-miniconda/envs/r-reticulate/bin:$PATH"';
 alias dontUseReticulate='export PATH=${PATH//\/Users\/jonas\/Library\/r-miniconda\/envs\/r-reticulate\/bin:}'
 
+alias useAndroid='export PATH="/Volumes/data/local/android-cmdline-tools/bin$PATH"';
+
+
 # Force pipenv to create it's own virtual env also when (it thinks) it is within a virtual env
 export PIPENV_IGNORE_VIRTUALENVS=1
