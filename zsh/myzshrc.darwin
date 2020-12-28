@@ -136,3 +136,9 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 # Move to /etc/launchd.conf
 # export STATA_PROJECT_DIR="~/git/myrepos"
 # launchctl setenv STATA_PROJECT_DIR "~/git/myrepos"
+
+
+# Android
+# =======
+
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
