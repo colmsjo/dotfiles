@@ -130,6 +130,7 @@ alias dontUsePythonBrew='export PATH=${PATH//\/usr\/local\/opt\/python\/libexec\
 # Force pipenv to create it's own virtual env also when (it thinks) it is within a virtual env
 export PIPENV_IGNORE_VIRTUALENVS=1
 
+
 # Stata
 # =======
 
@@ -142,3 +143,9 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 # =======
 
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
+
+# R
+# ====
+
+alias useR='export PATH="/Library/Frameworks/R.framework/Resources:$PATH";'
+alias dontUseR='export PATH=${PATH//\/Frameworks\/R.framework\/Resources:}'
