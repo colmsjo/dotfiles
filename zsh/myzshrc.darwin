@@ -149,3 +149,9 @@ export ANDROID_SDK_ROOT=~/Library/Android/sdk
 
 alias useR='export PATH="/Library/Frameworks/R.framework/Resources:$PATH";'
 alias dontUseR='export PATH=${PATH//\/Frameworks\/R.framework\/Resources:}'
+
+# TinyTeX
+# =======
+
+alias useTinyTeX='export PATH="/Users/jonas2/Library/TinyTeX/bin/x86_64-darwin:$PATH";'
+alias dontUseTinyTeX='export PATH=${PATH//\/Users\/jonas2\/Library\/TinyTeX\/bin\/x86_64-darwin:}'
