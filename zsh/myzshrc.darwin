@@ -139,6 +139,11 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 # launchctl setenv STATA_PROJECT_DIR "~/git/myrepos"
 
 
+# Android
+# =======
+
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
+
 # R
 # ====
 
@@ -149,6 +154,13 @@ alias dontUseR='export PATH=${PATH//\/Frameworks\/R.framework\/Resources:}'
 # sdkman
 # =======
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/jonas/.sdkman"
 [[ -s "/Users/jonas/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jonas/.sdkman/bin/sdkman-init.sh"
+
+
+# TinyTeX
+# =======
+# Make sure tex isn't in the path already - check /etc/paths.d
+
+alias useTinyTeX='export PATH="/Users/jonas2/Library/TinyTeX/bin/x86_64-darwin:$PATH";'
+alias dontUseTinyTeX='export PATH=${PATH//\/Users\/jonas2\/Library\/TinyTeX\/bin\/x86_64-darwin:}'
