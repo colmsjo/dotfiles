@@ -144,3 +144,11 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 
 alias useR='export PATH="/Library/Frameworks/R.framework/Resources:$PATH";'
 alias dontUseR='export PATH=${PATH//\/Frameworks\/R.framework\/Resources:}'
+
+
+# sdkman
+# =======
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/jonas/.sdkman"
+[[ -s "/Users/jonas/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jonas/.sdkman/bin/sdkman-init.sh"
